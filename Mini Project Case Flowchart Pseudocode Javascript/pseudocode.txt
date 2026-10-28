@@ -1,0 +1,31 @@
+START
+
+INPUT harga
+INPUT jumlah
+INPUT anggota
+
+IF harga <= 0 OR harga bukan number OR jumlah <= 0 OR jumlah bukan bilangan bulat
+  OUTPUT = "Input tidak valid"
+  END
+ELSE
+  subtotal = harga * jumlah
+END IF
+
+IF anggota = TRUE
+  diskon = 10% * subtotal
+ELSE 
+  diskon = 0
+END IF
+
+total setelah diskon = subtotal - diskon
+
+IF total setelah diskon >= 250.000 
+  ongkos kirim = Rp 0
+ELSE 
+  ongkos kirim = Rp 15.000
+END IF
+
+total bayar = total setelah diskon + ongkos kirim
+OUTPUT = subtotal, diskon, ongkos kirim, total bayar
+
+END
